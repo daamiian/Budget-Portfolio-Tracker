@@ -1,5 +1,7 @@
 # Budget-Portfolio-Tracker
 
+**VIDEO EXPLANATION COMING SOON**
+
 ## 1 Overview
 
 Welcome to the best money manager money can't buy...because it's free. 
