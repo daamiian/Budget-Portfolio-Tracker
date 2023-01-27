@@ -68,3 +68,11 @@ And that's it! Any other information you might want to know can be found in the 
 If you find a calculation error or something wrong in general, please submit an issue and I will do my best to fix it. 
 
 This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. Thank you.
+
+## 7 Donation Links
+
+[Buy Me a Coffee](https://www.buymeacoffee.com/daamiian)
+
+Monero Wallet Address: 4AZGD9mLNTm5Ao2AyBA1ep99BGnA4KprdV6g4iNkjPk4CQXhQrN4gChbxaqvBJp4tdTZj3YybySjJMJq2nRkzeqDFdu3PWL
+
+You can find the monero address QR code as an image in the repository
