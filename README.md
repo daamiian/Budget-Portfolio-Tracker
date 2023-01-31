@@ -1,7 +1,5 @@
 # Budget-Portfolio-Tracker
 
-**VIDEO EXPLANATION COMING SOON**
-
 ## 1 Overview
 
 Welcome to the best money manager money can't buy...because it's free. 
@@ -69,7 +67,7 @@ And that's it! Any other information you might want to know can be found in the 
 
 If you find a calculation error or something wrong in general, please submit an issue and I will do my best to fix it. 
 
-This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. Thank you.
+This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. I will be using the donations to turn this sheet into an app in the near future, and then anything extra will support new projects with the same values: privacy, intuitive design, and always free. Cheers!
 
 ## 7 Donation Links
 
@@ -77,4 +75,4 @@ This sheet took me a lot of time to get right while keeping it pretty and functi
 
 Monero Wallet Address: 4AZGD9mLNTm5Ao2AyBA1ep99BGnA4KprdV6g4iNkjPk4CQXhQrN4gChbxaqvBJp4tdTZj3YybySjJMJq2nRkzeqDFdu3PWL
 
-You can find the monero address QR code as an image in the repository
+(You can find the monero address QR code as an image in this repository)
