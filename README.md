@@ -10,7 +10,7 @@ I made this Google Spreadsheet to track every transfer of money, from income, ex
 
 This sheet, accompanied with some scripts written with AppScript, will help you track it all, in style. Keep reading to learn how to use it.
 
-The csv file you can download is for personal finances, but it can be modified easily into a business finance tracker, or a group project finance tracker by searching and replacing all instances of "Personal" with "Business" or "Project" or whatever you want. Then, you may want to update the grey rows representing categories to match your use-case. EZ PZ! Regarding that, I will only be providing the personal version, since version tracking two sheets will be time consuming.
+The csv file you can download is for personal finances, but it can be modified easily into a business finance tracker, or a group project finance tracker by searching and replacing all instances of "Personal" with "Business" or "Project" or whatever you want. Then, you may want to update the grey rows representing categories to match your use-case. Just remember to replace even the matches inside functions. 
 
 ## 2 Sheet Contents
 
