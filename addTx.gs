@@ -6,7 +6,6 @@ function onEdit(e) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var dashboard = ss.getSheetByName("DASHBOARD");
   var transactions = ss.getSheetByName("TRANSACTIONS");
-  var checkValues = ["Sell", "Buy", "Portfolio"];
   
   // Insert a new row above the first row in the range B4:K4
   transactions.insertRowBefore(4);
@@ -29,8 +28,4 @@ function onEdit(e) {
   // Reset the dashboard D12 value back to "Submit!"
   dashboard.getRange("D5:D11").clearContent();
   dashboard.getRange("D12").setValue("Ready!");
-
-  // Update profit calculation if cell C4 is a sell transaction
-  if (checkValues.includes(transactions.getRange("C4").getValue()))
-    refreshFIFOProfit();
 }
