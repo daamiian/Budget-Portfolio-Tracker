@@ -8,7 +8,9 @@ Aren't spreadsheets ugly enough these days? On top of that, opening a spreadshee
 
 I made this Google Spreadsheet to track every transfer of money, from income, expenses, savings & investment allocations, to pretty much anything your little heart desires. The goal is to have one tool to track everywhere your money goes. No more cycling between different portfolio managers and budgeting apps, it's all here, and it has been designed with simplicity, aesthetic, and attention to detail. The sheet's main tabs for inputting data have also been designed to be viewed on a mobile phone, and analytic tabs are slightly wider, for computer viewing or tablet viewing. 
 
-This sheet, accompanied with some scripts written with AppScript, will help you track it all, in style. Keep reading to learn how to use it, or look at the video I provided.
+This sheet, accompanied with some scripts written with AppScript, will help you track it all, in style. Keep reading to learn how to use it.
+
+The csv file you can download is for personal finances, but it can be modified easily into a business finance tracker, or a group project finance tracker by searching and replacing all instances of "Personal" with "Business" or "Project" or whatever you want. Then, you may want to update the grey rows representing categories to match your use-case. Just remember to replace even the matches inside functions. 
 
 ## 2 Sheet Contents
 
@@ -60,19 +62,23 @@ Cashflow is the amount of money an asset makes you. If it's negative, it means t
 
 Everything about your portfolio performance is shown in the PORTFOLIO tab.
 
+## 6 Updating
 
-## 6 Closing Notes
+If there are errors, I will need to reupload the sheet. You should check in once in a while to make sure you're using the latest version. When upgrading, you can download the latest version, I recommend keeping a copy of your current file, then copying all of your inputs into the new version in order to keep your source names. The TRANSACTIONS sheet will likley never be updated since it's so simple, so you can keep your old one. 
 
-And that's it! Any other information you might want to know can be found in the video or in the notes provided in many of the cells all over the spreadsheet. 
+
+## 7 Closing Notes
+
+And that's it! Any other information you might want to know can be found in the notes provided in many of the cells all over the spreadsheet. 
 
 If you find a calculation error or something wrong in general, please submit an issue and I will do my best to fix it. 
 
-This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. Thank you.
+This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. I will be using the donations to turn this sheet into an app in the near future, and then anything extra will support new projects with the same values: privacy, intuitive design, and always free. Cheers!
 
 ## 7 Donation Links
 
-[Buy Me a Coffee](https://www.buymeacoffee.com/daamiian)
+☕ **[Buy Me a Coffee](https://www.buymeacoffee.com/daamiian)** 
 
-Monero Wallet Address: 4AZGD9mLNTm5Ao2AyBA1ep99BGnA4KprdV6g4iNkjPk4CQXhQrN4gChbxaqvBJp4tdTZj3YybySjJMJq2nRkzeqDFdu3PWL
+**Monero Wallet Address**: 4AZGD9mLNTm5Ao2AyBA1ep99BGnA4KprdV6g4iNkjPk4CQXhQrN4gChbxaqvBJp4tdTZj3YybySjJMJq2nRkzeqDFdu3PWL
 
-You can find the monero address QR code as an image in the repository
+(You can find the monero address QR code as an image in this repository)

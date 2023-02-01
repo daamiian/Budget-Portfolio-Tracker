@@ -1,0 +1,4 @@
+function onOpen() {
+  mostRecentSheet();
+  refreshFIFOProfit()
+}
