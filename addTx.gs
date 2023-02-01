@@ -3,68 +3,34 @@ function onEdit(e) {
   if (e.source.getActiveSheet().getName() !== "DASHBOARD" || 
       e.range.getA1Notation() != 'D12' || typeof e.value == 'object') return;
   
-  var spreadsheet = SpreadsheetApp.getActive();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('B3:K3').activate();
-  spreadsheet.getActiveSheet().getFilter();
-  spreadsheet.getActiveSheet().getFilter().remove();
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var dashboard = ss.getSheetByName("DASHBOARD");
+  var transactions = ss.getSheetByName("TRANSACTIONS");
+  var checkValues = ["Sell", "Buy", "Portfolio"];
+  
+  // Insert a new row above the first row in the range B4:K4
+  transactions.insertRowBefore(4);
+  
+  // Copy the formatting and certain cell values from row 5 to the newly added row (now row 4)
+  transactions.getRange("J4:K4").merge();  
+  transactions.getRange("B5:K5").copyTo(transactions.getRange("B4:K4"), { formatOnly: true });
+  transactions.getRange("A5").copyTo(transactions.getRange("A4"));
+  transactions.getRange("G5").copyTo(transactions.getRange("G4"));
+  
+  // Copy values from the DASHBOARD to the newly added row in the TRANSACTIONS sheet
+  dashboard.getRange("D10").copyTo(transactions.getRange("B4"), { contentsOnly: true });
+  dashboard.getRange("D5").copyTo(transactions.getRange("C4"), { contentsOnly: true });
+  dashboard.getRange("D6").copyTo(transactions.getRange("D4"), { contentsOnly: true });
+  dashboard.getRange("D7").copyTo(transactions.getRange("E4"), { contentsOnly: true });
+  dashboard.getRange("D8").copyTo(transactions.getRange("F4"), { contentsOnly: true });
+  dashboard.getRange("D9").copyTo(transactions.getRange("H4"), { contentsOnly: true });
+  dashboard.getRange("D11").copyTo(transactions.getRange("J4:K4"), { contentsOnly: true });
+  
+  // Reset the dashboard D12 value back to "Submit!"
+  dashboard.getRange("D5:D11").clearContent();
+  dashboard.getRange("D12").setValue("Ready!");
 
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('4:4').activate();
-  spreadsheet.getActiveSheet().insertRowsBefore(spreadsheet.getActiveRange().getRow(), 1);
-  spreadsheet.getActiveRange().offset(0, 0, 1, spreadsheet.getActiveRange().getNumColumns()).activate();
-  spreadsheet.getRange('A4:K4').activate();
-  spreadsheet.getRange('A5:K5').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
-  spreadsheet.getRange('B4:F4').activate();
-  spreadsheet.getActiveRangeList().clear({contentsOnly: true, skipFilteredRows: true});
-  spreadsheet.getRange('H4:K4').activate();
-  spreadsheet.getActiveRangeList().clear({contentsOnly: true, skipFilteredRows: true});
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D10').activate();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('B4').activate();
-  spreadsheet.getRange('DASHBOARD!D10').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D5').activate();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('C4').activate();
-  spreadsheet.getRange('DASHBOARD!D5').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D6').activate();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('D4').activate();
-  spreadsheet.getRange('DASHBOARD!D6').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D7').activate();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('E4').activate();
-  spreadsheet.getRange('DASHBOARD!D7').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D8').activate();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('F4').activate();
-  spreadsheet.getRange('DASHBOARD!D8').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D9').activate();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('H4').activate();
-  spreadsheet.getRange('DASHBOARD!D9').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D11').activate();
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('TRANSACTIONS'), true);
-  spreadsheet.getRange('J4:K4').activate();
-  spreadsheet.getRange('DASHBOARD!D11').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_VALUES, false);
-
-  spreadsheet.getRange('B3:K').activate();
-  spreadsheet.getRange('B3:K').createFilter();
-  spreadsheet.getRange('B3').activate();
-  spreadsheet.getActiveSheet().getFilter();
-
-  spreadsheet.setActiveSheet(spreadsheet.getSheetByName('DASHBOARD'), true);
-  spreadsheet.getRange('D5:D11').activate();
-  spreadsheet.getActiveRangeList().clear({contentsOnly: true, skipFilteredRows: true});
-  spreadsheet.getRange('D12').activate();
-  spreadsheet.getRange('D12').setValue("Submit!");
-
-  refreshFIFOProfit()
+  // Update profit calculation if cell C4 is a sell transaction
+  if (checkValues.includes(transactions.getRange("C4").getValue()))
+    refreshFIFOProfit();
 }
