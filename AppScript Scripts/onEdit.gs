@@ -6,8 +6,6 @@ function onEdit(e) {
     var dashboard = sheet.getSheetByName("DASHBOARD");
     var transactions = sheet.getSheetByName("TRANSACTIONS");
     
-    dashboard.getRange("D12").setValue("Please Wait...");
-
     // Insert a new row above the first row in the range B4:K4
     transactions.insertRowBefore(4);
     
