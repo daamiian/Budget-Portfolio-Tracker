@@ -83,7 +83,7 @@ This sheet took me a lot of time to get right while keeping it pretty and functi
 
 ## 7 Links
 
-**[OPEN THE SHEET](https://docs.google.com/spreadsheets/d/1027NEbGv6xhRANhu_yghA_fvjH3bG_UXlGA5S7mOGqQ/edit?usp=sharing)**
+**[Personal Budget & Portfolio Tracker](https://docs.google.com/spreadsheets/d/1027NEbGv6xhRANhu_yghA_fvjH3bG_UXlGA5S7mOGqQ/edit?usp=sharing)**
 
 ---
 
