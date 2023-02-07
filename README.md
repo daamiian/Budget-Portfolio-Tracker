@@ -85,6 +85,8 @@ This sheet took me a lot of time to get right while keeping it pretty and functi
 
 **[OPEN THE SHEET](https://docs.google.com/spreadsheets/d/1027NEbGv6xhRANhu_yghA_fvjH3bG_UXlGA5S7mOGqQ/edit?usp=sharing)**
 
+---
+
 ☕ **[Buy Me a Coffee](https://www.buymeacoffee.com/daamiian)** 
 
 **Monero Wallet Address**: 4AZGD9mLNTm5Ao2AyBA1ep99BGnA4KprdV6g4iNkjPk4CQXhQrN4gChbxaqvBJp4tdTZj3YybySjJMJq2nRkzeqDFdu3PWL
