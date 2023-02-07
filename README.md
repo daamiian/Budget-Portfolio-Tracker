@@ -50,7 +50,7 @@ At the end of the tab, you can find the transactions for the month. This is usef
 
 ## 3 Setup Instructions
 
-The sheets have been saved as csv files, so you will need to download the files to your computer, then upload them to your google drive. The scripts can be added by selecting Extensions>AppScript from the Google Sheets sheet, then you can just copy and paste them, using the same names I set. After that, you're set and ready to plan your first month.
+The sheet is shared with a link (see below). Open it then just make a copy to your google drive. The scripts can be added by selecting Extensions>AppScript from the Google Sheets sheet, then you can just copy and paste them, using the same names I set. After that, you're set and ready to plan your first month. No email, no money. Make a burner Google account if you don't want the sheet linked to you. 
 
 
 ## 4 Adding Transactions
@@ -72,7 +72,7 @@ Everything about your portfolio performance is shown in the PORTFOLIO tab.
 
 ## 6 Updating
 
-I will update the sheet version number so keep an eye out to make sure you're using the latest version. When upgrading, you can copy the latest version, I recommend keeping a copy of your current file, then copying all of your inputs into the new version in order to keep your source names. The TRANSACTIONS sheet will likley never be updated since it's so simple, so you can keep your old one. 
+I will update the sheet version number so keep an eye out to make sure you're using the latest version. When upgrading, you can copy the latest version, I recommend keeping a copy of your current version, then copying all of your inputs into the new version in order to keep your source names. I will eventually make a script to do this process for you. The TRANSACTIONS sheet will likley never be updated since it's so simple, so you can keep your old one.
 
 
 ## 7 Closing Notes
@@ -81,7 +81,7 @@ And that's it! Any other information you might want to know can be found in the 
 
 If you find a calculation error or something wrong in general, please submit an issue and I will do my best to fix it. 
 
-This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. I will be using the donations to turn this sheet into an app in the near future, and then anything extra will support new projects with the same values: privacy, intuitive design, and always free. Cheers!
+This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. I will be using the donations to turn this sheet into a free app as soon as possible, and then anything extra will support new projects with the same values: privacy, intuitive design, and always free. Cheers!
 
 ## 7 Links
 
