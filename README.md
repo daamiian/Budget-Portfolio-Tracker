@@ -2,9 +2,11 @@
 
 ## NEW
 
+The sheet is finally ready for the 1.0 version number. It is complete and easy to use, and I added some usage clips on my phone. There are a few things I still need to improve, but it should all work and it should be accurate. Please submit an issue if you spot something. If you're just finding this project, read on!
+
 1. Fixed formula errors
 2. Increased add transaction speed
-3. Added "add row" functionality to add rows without right clicking rows. Tap the checkbox!
+3. Added "add row" functionality to add rows easier on mobile. Tap the checkboxes in the planners and in the portfolio to check it out!
 
 ## 1 Overview
 
@@ -16,7 +18,7 @@ I made this Google Spreadsheet to track every transfer of money, from income, ex
 
 This sheet, accompanied with some scripts written with AppScript, will help you track it all, in style. Keep reading to learn how to use it.
 
-The csv file you can download (link below) is for personal finances, but it can be modified easily into a business finance tracker, or a group project finance tracker by searching and replacing all instances of "Personal" with "Business" or "Project" (include formulas). Then, you may want to update the grey rows representing categories to match your use-case. 
+The link you can copy from (found at the end of this README below) is for personal finances, but it can be modified easily into a business finance tracker, or a group project finance tracker by searching and replacing all instances of "Personal" with "Business" or "Project" (include formulas). Then, you may want to update the grey rows representing categories to match your use-case. 
 
 ## 2 Sheet Contents
 
@@ -48,7 +50,7 @@ At the end of the tab, you can find the transactions for the month. This is usef
 
 ## 3 Setup Instructions
 
-The sheets have been saved as csv files, so you will need to download the files to your computer, then upload them to your google drive. The scripts can be added by selecting Extensions>AppScript from the Google Sheets sheet, then you can just copy and paste them, using the same names I set. After that, you're set and ready to plan your first month.
+The sheet is shared with a link (see below). Open it then just make a copy to your google drive. The scripts can be added by selecting Extensions>AppScript from the Google Sheets sheet, then you can just copy and paste them, using the same names I set. After that, you're set and ready to plan your first month. No email, no money. Make a burner Google account if you don't want the sheet linked to you. 
 
 
 ## 4 Adding Transactions
@@ -70,7 +72,7 @@ Everything about your portfolio performance is shown in the PORTFOLIO tab.
 
 ## 6 Updating
 
-I will update the sheet version number so keep an eye out to make sure you're using the latest version. When upgrading, you can copy the latest version, I recommend keeping a copy of your current file, then copying all of your inputs into the new version in order to keep your source names. The TRANSACTIONS sheet will likley never be updated since it's so simple, so you can keep your old one. 
+I will update the sheet version number so keep an eye out to make sure you're using the latest version. When upgrading, you can copy the latest version, I recommend keeping a copy of your current version, then copying all of your inputs into the new version in order to keep your source names. I will eventually make a script to do this process for you. The TRANSACTIONS sheet will likley never be updated since it's so simple, so you can keep your old one.
 
 
 ## 7 Closing Notes
@@ -79,11 +81,13 @@ And that's it! Any other information you might want to know can be found in the 
 
 If you find a calculation error or something wrong in general, please submit an issue and I will do my best to fix it. 
 
-This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. I will be using the donations to turn this sheet into an app in the near future, and then anything extra will support new projects with the same values: privacy, intuitive design, and always free. Cheers!
+This sheet took me a lot of time to get right while keeping it pretty and functional. If you are able and you found this useful, please consider donating. I will be using the donations to turn this sheet into a free app as soon as possible, and then anything extra will support new projects with the same values: privacy, intuitive design, and always free. Cheers!
 
 ## 7 Links
 
-**[OPEN THE SHEET](https://docs.google.com/spreadsheets/d/1027NEbGv6xhRANhu_yghA_fvjH3bG_UXlGA5S7mOGqQ/edit?usp=sharing)**
+**[Personal Budget & Portfolio Tracker v1.0](https://docs.google.com/spreadsheets/d/1027NEbGv6xhRANhu_yghA_fvjH3bG_UXlGA5S7mOGqQ/edit?usp=sharing)**
+
+---
 
 ☕ **[Buy Me a Coffee](https://www.buymeacoffee.com/daamiian)** 
 
