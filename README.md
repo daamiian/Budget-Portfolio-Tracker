@@ -1,5 +1,41 @@
 # Budget-Portfolio-Tracker
 
+<!-- First row: Dashboard and Monthly Planner images -->
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/46056105/217242728-59daa3fb-672f-4d8a-9a37-dc981688eebf.png" width="300" height="650" />
+  <img src="https://user-images.githubusercontent.com/46056105/217242746-305977ae-5ffb-468a-8174-8cf832ee70e8.png" width="300" height="650" />
+  <img src="https://user-images.githubusercontent.com/46056105/217242754-fce4084e-a211-4ec2-babd-375463dcaa06.png" width="300" height="650" />
+</p>
+
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/46056105/217242785-3f88fa79-5db3-437e-af42-906a768d056f.png" width="300" height="550" />
+  <img src="https://user-images.githubusercontent.com/46056105/217242793-bcc7bcdd-1231-4190-9b90-5677f1173bb8.png" width="300" height="550" />
+  <img src="https://user-images.githubusercontent.com/46056105/217242809-0ab6eb45-9488-4580-b4e9-292c44f94943.png" width="300" height="550" />
+</p>
+
+<!-- Second row: Portfolio images -->
+<p>
+  <img src="https://user-images.githubusercontent.com/46056105/217242845-7903c279-348a-4070-adac-e564c5ff0fb3.png" />
+</p>
+
+<p>
+  <img src="https://user-images.githubusercontent.com/46056105/217243018-12940a11-951a-4088-bb4f-64909231d45d.png" />
+</p>
+
+<p>
+  <img src="https://user-images.githubusercontent.com/46056105/217243032-82e8a58d-0df5-4a9c-a41c-43b185790b05.png" />
+</p>
+
+<p float="left">
+  <a href="https://www.youtube.com/watch?v=xVBp93B_mfs" target="_blank">
+    <img src="https://img.youtube.com/vi/xVBp93B_mfs/0.jpg" width="240" height="180" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=0LRa2dEGYKA" target="_blank">
+    <img src="https://img.youtube.com/vi/0LRa2dEGYKA/0.jpg" width="240" height="180" />
+  </a>
+</p>
+
+
 ## NEW
 
 The sheet is finally ready for the 1.0 version number. It is complete and easy to use, and I added some usage clips on my phone. There are a few things I still need to improve, but it should all work and it should be accurate. Please submit an issue if you spot something. If you're just finding this project, read on!
