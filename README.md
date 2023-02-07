@@ -2,9 +2,11 @@
 
 ## NEW
 
+The sheet is finally ready for the 1.0 version number. It is complete and easy to use, and I added some usage clips on my phone. There are a few things I still need to improve, but it should all work and it should be accurate. Please submit an issue if you spot something. If you're just finding this project, read on!
+
 1. Fixed formula errors
 2. Increased add transaction speed
-3. Added "add row" functionality to add rows without right clicking rows. Tap the checkbox!
+3. Added "add row" functionality to add rows easier on mobile. Tap the checkboxes in the planners and in the portfolio to check it out!
 
 ## 1 Overview
 
@@ -16,7 +18,7 @@ I made this Google Spreadsheet to track every transfer of money, from income, ex
 
 This sheet, accompanied with some scripts written with AppScript, will help you track it all, in style. Keep reading to learn how to use it.
 
-The csv file you can download (link below) is for personal finances, but it can be modified easily into a business finance tracker, or a group project finance tracker by searching and replacing all instances of "Personal" with "Business" or "Project" (include formulas). Then, you may want to update the grey rows representing categories to match your use-case. 
+The link you can copy from (found at the end of this README below) is for personal finances, but it can be modified easily into a business finance tracker, or a group project finance tracker by searching and replacing all instances of "Personal" with "Business" or "Project" (include formulas). Then, you may want to update the grey rows representing categories to match your use-case. 
 
 ## 2 Sheet Contents
 
