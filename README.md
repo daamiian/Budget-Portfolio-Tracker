@@ -108,11 +108,7 @@ Everything about your portfolio performance is shown in the PORTFOLIO tab.
 
 ## 6 Updating
 
-I will update the sheet version number so keep an eye out to make sure you're using the latest version. Updating to a newer sheet can be a pain, until scripts are written to automate it. When updating, always KEEP YOUR SHEET and copy over tabs as needed. 
-- TRANSACTIONS should never need updating, keep your TRANSACTIONS SHEET, always
-- DASHBOARD has no inputs, so just copy the DASHBOARD tab to your old spreadsheet, rename, delete the old one.
-- Keep your monthly planners as is, but duplicate the new one for your next month. You will need to copy over the blue input cells.
-- PORTFOLIO will need to be replaced like the DASHBOARD, then your inputs will need to be copied over.
+Updating is now easy, I wrote a script for it. Inside the AppScripts folder you'll find a script named "updateSheet.gs". Run that script from the AppScript extension of your sheet. You never want to change your actual sheet, just update it. The script will do everything you need. It will delete old DASHBOARD and PORTFOLIO tabs, save some data for you in a new tab called OLD_DATA, then it will copy new tabs from the release version of the spreadsheet, the one linked below.
 
 
 ## 7 Closing Notes
