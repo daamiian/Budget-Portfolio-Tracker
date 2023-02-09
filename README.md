@@ -108,7 +108,11 @@ Everything about your portfolio performance is shown in the PORTFOLIO tab.
 
 ## 6 Updating
 
-I will update the sheet version number so keep an eye out to make sure you're using the latest version. When upgrading, you can copy the latest version, I recommend keeping a copy of your current version, then copying all of your inputs into the new version in order to keep your source names. I will eventually make a script to do this process for you. The TRANSACTIONS sheet will likley never be updated since it's so simple, so you can keep your old one.
+I will update the sheet version number so keep an eye out to make sure you're using the latest version. Updating to a newer sheet can be a pain, until scripts are written to automate it. When updating, always KEEP YOUR SHEET and copy over tabs as needed. 
+- TRANSACTIONS should never need updating, keep your TRANSACTIONS SHEET, always
+- DASHBOARD has no inputs, so just copy the DASHBOARD tab to your old spreadsheet, rename, delete the old one.
+- Keep your monthly planners as is, but duplicate the new one for your next month. You will need to copy over the blue input cells.
+- PORTFOLIO will need to be replaced like the DASHBOARD, then your inputs will need to be copied over.
 
 
 ## 7 Closing Notes
