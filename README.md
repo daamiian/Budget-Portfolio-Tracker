@@ -38,6 +38,8 @@
 
 ## NEW
 
+Watch the videos for usage!
+
 The sheet is finally ready for the 1.0 version number. It is complete and easy to use, and I added some usage clips on my phone. There are a few things I still need to improve, but it should all work and it should be accurate. Please submit an issue if you spot something. If you're just finding this project, read on!
 
 1. Fixed formula errors
