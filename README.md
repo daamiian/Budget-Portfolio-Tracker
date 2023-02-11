@@ -43,6 +43,7 @@ The sheet is finally ready for the 1.0 version number. It is complete and easy t
 1. Fixed formula errors
 2. Increased add transaction speed
 3. Added "add row" functionality to add rows easier on mobile. Tap the checkboxes in the planners and in the portfolio to check it out!
+4. Added an updateSheet script to automatically update your version to the newest. Just open it in Appscript and run it! No need to copy anything down.
 
 ## 1 Overview
 
