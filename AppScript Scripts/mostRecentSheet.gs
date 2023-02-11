@@ -22,7 +22,13 @@ function mostRecentSheet() {
       recentSheet = sheet;
     }
   }
-  var dashboardSheet = ss.getSheetByName("DASHBOARD");
-  var formula = recentSheet.getRange("A1").getFormula();
-  dashboardSheet.getRange("A1").setFormula(formula);
+
+  var month = recentSheet.getRange("B2:F2").getValue();
+  var year = recentSheet.getRange("G2").getValue();
+  var prefix = "'" + month + " " + year + "'" + "!";
+  var sourceDropdown = "=IF(REGEXMATCH(DASHBOARD!D5;\"Personal Income\");UNIQUE(INDEX("+prefix+"IncomeSources));IF(REGEXMATCH(DASHBOARD!D5;\"Personal Expense\");UNIQUE(INDEX("+prefix+"ExpenseSourses));IF(REGEXMATCH(DASHBOARD!D5;\"Deposit|Withdraw\");UNIQUE(INDEX({PORTFOLIO!SavingsAccounts;PORTFOLIO!ActivityAccounts}));IF(REGEXMATCH(DASHBOARD!D5;\"Crypto\");UNIQUE(INDEX(PORTFOLIO!CryptoAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Stock\");UNIQUE(INDEX(PORTFOLIO!StockAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Commodity\");UNIQUE(INDEX(PORTFOLIO!CommodityAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Real Estate\");UNIQUE(INDEX(PORTFOLIO!RealEstateAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Other\");UNIQUE(INDEX(PORTFOLIO!OtherAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Portfolio\");UNIQUE(INDEX({PORTFOLIO!SavingsAccounts;PORTFOLIO!ActivityAccounts;PORTFOLIO!CryptoAssets;PORTFOLIO!StockAssets;PORTFOLIO!CommodityAssets;PORTFOLIO!RealEstateAssets;PORTFOLIO!OtherAssets});\"\"))))))))))";
+  
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("DASHBOARD");
+  sheet.getRange("A1").setValue(sourceDropdown);
+  
 }
