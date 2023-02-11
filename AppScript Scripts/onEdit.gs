@@ -1,47 +1,34 @@
-function onEdit(e) {
-  var editedCellContents = e.range.getValue()
-
-  if (editedCellContents == "Please Wait..." && typeof e.value != 'object') {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet();
-    var dashboard = sheet.getSheetByName("DASHBOARD");
-    var transactions = sheet.getSheetByName("TRANSACTIONS");
-    
-    // Insert a new row above the first row in the range B4:K4
-    transactions.insertRowBefore(4);
-    
-    // Copy the formatting and certain cell values from row 5 to the newly added row (now row 4)
-    transactions.getRange("J4:K4").merge();  
-    transactions.getRange("B5:K5").copyTo(transactions.getRange("B4:K4"), { formatOnly: true });
-    transactions.getRange("A5").copyTo(transactions.getRange("A4"));
-    transactions.getRange("G5").copyTo(transactions.getRange("G4"));
-    
-    // Copy values from the DASHBOARD to the newly added row in the TRANSACTIONS sheet
-    dashboard.getRange("D10").copyTo(transactions.getRange("B4"), { contentsOnly: true });
-    dashboard.getRange("D5").copyTo(transactions.getRange("C4"), { contentsOnly: true });
-    dashboard.getRange("D6").copyTo(transactions.getRange("D4"), { contentsOnly: true });
-    dashboard.getRange("D7").copyTo(transactions.getRange("E4"), { contentsOnly: true });
-    dashboard.getRange("D8").copyTo(transactions.getRange("F4"), { contentsOnly: true });
-    dashboard.getRange("D9").copyTo(transactions.getRange("H4"), { contentsOnly: true });
-    dashboard.getRange("D11").copyTo(transactions.getRange("J4:K4"), { contentsOnly: true });
-    
-    // Reset the dashboard D12 value back to "Submit!"
-    dashboard.getRange("D5:D11").clearContent();
-    dashboard.getRange("D12").setValue("Ready to Submit!");
-
-  } else if (editedCellContents == "Adding Row..." && typeof e.value != 'object') {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet();
-    var currentRow = e.range.getRow();
-    var newRow = currentRow + 2;
-
-    sheet.insertRowBefore(newRow);
-
-    var copyRow = newRow-1;
-    var copyRange = "B"+copyRow+":"+copyRow;
-    var newRange = "B"+newRow+":"+newRow;
-
-    sheet.getRange(copyRange).copyTo(sheet.getRange(newRange));
-
-    e.range.setValue("Add Row!");
+function mostRecentSheet() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("DASHBOARD");
+  var range = sheet.getRange("A:A");
+  range.clearContent();
+  
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheets = ss.getSheets();
+  var maxDate = new Date(0);
+  var recentSheet;
+  
+  for (var i = 0; i < sheets.length; i++) {
+    var sheet = sheets[i];
+    if (sheet.getName() == "DASHBOARD" || sheet.getName() == "PORTFOLIO" || sheet.getName() == "TRANSACTIONS") {
+      continue;
     }
-  return;
+    var h2 = sheet.getRange("H2").getValue();
+    if (h2 == "" || h2 == 0 || isNaN(h2)) {
+      continue;
+    }
+    if (h2 > maxDate) {
+      maxDate = h2;
+      recentSheet = sheet;
+    }
+  }
+
+  var month = recentSheet.getRange("B2:F2").getValue();
+  var year = recentSheet.getRange("G2").getValue();
+  var prefix = "'" + month + " " + year + "'" + "!";
+  var sourceDropdown = "=IF(REGEXMATCH(DASHBOARD!D5;\"Personal Income\");UNIQUE(INDEX("+prefix+"IncomeSources));IF(REGEXMATCH(DASHBOARD!D5;\"Personal Expense\");UNIQUE(INDEX("+prefix+"ExpenseSourses));IF(REGEXMATCH(DASHBOARD!D5;\"Deposit|Withdraw\");UNIQUE(INDEX({PORTFOLIO!SavingsAccounts;PORTFOLIO!ActivityAccounts}));IF(REGEXMATCH(DASHBOARD!D5;\"Crypto\");UNIQUE(INDEX(PORTFOLIO!CryptoAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Stock\");UNIQUE(INDEX(PORTFOLIO!StockAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Commodity\");UNIQUE(INDEX(PORTFOLIO!CommodityAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Real Estate\");UNIQUE(INDEX(PORTFOLIO!RealEstateAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Other\");UNIQUE(INDEX(PORTFOLIO!OtherAssets));IF(REGEXMATCH(DASHBOARD!D5;\"Portfolio\");UNIQUE(INDEX({PORTFOLIO!SavingsAccounts;PORTFOLIO!ActivityAccounts;PORTFOLIO!CryptoAssets;PORTFOLIO!StockAssets;PORTFOLIO!CommodityAssets;PORTFOLIO!RealEstateAssets;PORTFOLIO!OtherAssets});\"\"))))))))))";
+  
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("DASHBOARD");
+  sheet.getRange("A1").setValue(sourceDropdown);
+  
 }
