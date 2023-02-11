@@ -89,7 +89,7 @@ At the end of the tab, you can find the transactions for the month. This is usef
 
 ## 3 Setup Instructions
 
-The sheet is shared with a link (see below). Open it then just make a copy to your google drive. The scripts can be added by selecting Extensions>AppScript from the Google Sheets sheet, then you can just copy and paste them, using the same names I set. After that, you're set and ready to plan your first month. No email, no money. Make a burner Google account if you don't want the sheet linked to you. 
+The sheet is shared with a link (see below). Open it then just make a copy to your google drive. The scripts will automatically be there because I use them for the development sheet, but you may need to grant permission to the scripts to access the spreadsheet. If you want to add the scripts manually, you can just copy and paste them using the code I provided, using the same names I set. After that, you need to run the update script or some functions in cells won't calculate properly. Then, you're set and ready to plan your first month. No email, no money. Make a burner Google account if you don't want the sheet linked to you. 
 
 
 ## 4 Adding Transactions
