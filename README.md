@@ -131,3 +131,9 @@ This sheet took me a lot of time to get right while keeping it pretty and functi
 **Monero Wallet Address**: 4AZGD9mLNTm5Ao2AyBA1ep99BGnA4KprdV6g4iNkjPk4CQXhQrN4gChbxaqvBJp4tdTZj3YybySjJMJq2nRkzeqDFdu3PWL
 
 (You can find the monero address QR code as an image in this repository)
+
+
+## Known Issues / Working on...
+
+- Buttons not updating link after updating. This is because when you update, I am just copying the tabs from my development sheet over to yours, which means named ranges, links, and data validation can get tricky. Luckily I have fixed the named ranges and data validation issues (most pressing), but the links still need some love. Workaround: Simply click the pencil icon to manually update the button to link to the new tab after updating. The only ones you'll need to do this for is the PORTFOLIO and DASHBOARD buttons. 
+- Copying over portfolio data automatically after updating. I want to get rid of the OLD_DATA tab idea and just update it all automatically, no hassle. 
